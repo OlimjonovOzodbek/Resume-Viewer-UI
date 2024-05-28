@@ -1,0 +1,23 @@
+<table style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Id</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Owner's Id</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Name</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Status</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Upload date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (resume of resumes; track resume.id) {
+            <tr>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.id}}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.userId}}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.name}}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.status}}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.uploadDate}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
+  

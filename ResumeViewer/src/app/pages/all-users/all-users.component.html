@@ -1,0 +1,20 @@
+<table style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Id</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Name</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Email</th>
+            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (user of users; track user.id) {
+            <tr>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{user.id}}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{user.name}}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{user.email}}</td>
+                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{user.role}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
