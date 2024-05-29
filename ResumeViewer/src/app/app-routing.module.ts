@@ -7,6 +7,7 @@ import { AllResumesComponent } from './pages/all-resumes/all-resumes.component';
 import { AllUserResumesComponent } from './pages/all-user-resumes/all-user-resumes.component';
 import { UploadResumeComponent } from './pages/upload-resume/upload-resume.component';
 import { HomeComponent } from './components/home/home.component';
+import { MainComponent } from './components/main/main.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'all-resumes', component: AllResumesComponent },
   { path: 'my-resumes', component: AllUserResumesComponent },
   { path: 'upload-resume', component: UploadResumeComponent },
+  {path: 'main', component: MainComponent},
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: '**', component: HomeComponent }
