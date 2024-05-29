@@ -13,7 +13,7 @@ import { AllUserResumesComponent } from './pages/all-user-resumes/all-user-resum
 import { UploadResumeComponent } from './pages/upload-resume/upload-resume.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-
+import { RouterLink } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +31,8 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   providers: [],
   bootstrap: [AppComponent]

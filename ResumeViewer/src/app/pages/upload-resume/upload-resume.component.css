@@ -1,0 +1,41 @@
+.container {
+    justify-content: center;
+    margin-top: 20px;
+}
+.upload-file{
+    margin: 0 auto;
+    border: 2px solid purple;
+    border-radius: 50px;
+    margin-top: 30px;
+    height: 400px;
+    width: 600px;
+}
+.file-input{
+    background-color: black;
+}
+.back{
+    color:blue;
+    height: 30px;
+    border: 2px solid blue;
+    width: 100px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+button{
+    display: block;
+}
+
+@media (max-width: 576px) {
+    .container {
+        display: block;
+        text-align: center;
+    }
+    .container .upload-file{
+        height: 250px;
+        width: 400px;
+    }
+    .container button {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
