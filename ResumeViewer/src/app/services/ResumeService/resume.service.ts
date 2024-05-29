@@ -66,19 +66,19 @@ export class ResumeService {
   
 
 
-  // getById(id: string): Observable<Blob> {
-  //   const headers = new HttpHeaders(({
-  //     'Authorization': `Bearer ${localStorage.getItem(this.tokenKey)}`
-  //   }))
+  getById(id: string): Observable<Blob> {
+    const headers = new HttpHeaders(({
+      'Authorization': `Bearer ${localStorage.getItem(this.tokenKey)}`
+    }))
 
-  //   return this.http.get(`${this.apiUrl}User/GetById?id=${id}`, { responseType: 'blob', headers })
-  //     .pipe(
-  //       catchError((err: any) => {
-  //         console.error(err);
-  //         throw err;
-  //       })
-  //     )
-  // }
+    return this.http.get(`${this.apiUrl}Resume/GetById?id=${id}`, { responseType: 'blob', headers })
+      .pipe(
+        catchError((err: any) => {
+          console.error(err);
+          throw err;
+        })
+      )
+  }
 
   // getByUserId(id: string, userId: string, token: string): Observable<Blob> {
   //   const headers = new HttpHeaders(({
