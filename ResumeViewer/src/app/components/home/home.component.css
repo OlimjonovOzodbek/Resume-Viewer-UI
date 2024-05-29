@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.descriptions{
+    margin-top: 70px;
+    font-family: "REM", sans-serif;
+    font-size: 40px;
+}
+.Resume-Image img{
+    display: block;
+    height: 450px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+button{
+    color: white;
+    background-color: red;
+}
+@media (max-width: 700px) {
+    .container {
+        display: block;
+        text-align: center;
+    }
+    .container h1 {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .Resume-Image img{
+        margin: 0 auto;
+    }
+}

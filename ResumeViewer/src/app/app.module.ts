@@ -13,7 +13,6 @@ import { AllUserResumesComponent } from './pages/all-user-resumes/all-user-resum
 import { UploadResumeComponent } from './pages/upload-resume/upload-resume.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { MainComponent } from './components/main/main.component';
     AllUserResumesComponent,
     UploadResumeComponent,
     NavbarComponent,
-    HomeComponent,
-    MainComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
