@@ -38,4 +38,16 @@ export class AllUserResumesComponent implements OnInit {
     }
 
   }
+
+  deleteResume(id: string, userId: string): void {
+    this.service.deleteResume(id, userId).subscribe({
+      next: (response) => {
+        console.log(response)
+        this.loadResumes();
+      },
+      error: (err) => {
+        console.log(err)
+      }
+    })
+  } 
 }

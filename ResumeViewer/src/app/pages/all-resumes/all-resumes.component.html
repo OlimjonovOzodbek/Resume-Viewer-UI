@@ -1,24 +1,29 @@
-<table style="border-collapse: collapse; width: 100%;">
-    <thead>
-        <tr>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Id</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Owner's Id</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Name</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Status</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Upload date</th>
+<div class="container mt-5">
+    <table class="table table-responsive table-bordered border-dark table-hover text-center text-capitalize">
+        <thead>
+            <tr class="table-dark table-active text-uupercase text-white">
+                <th>Owner</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Upload date</th>
+                <th></th>
         </tr>
     </thead>
     <tbody>
         @for (resume of resumes; track resume.id) {
             <tr>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.id}}</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.userId}}</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.name}}</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.status}}</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{resume.uploadDate}}</td>
+                <th>
+                    <a class="btn btn-primary" [routerLink]="['/get-by-id', resume.id]">View</a>
+                </th>
+                <td>{{resume.name}}</td>
+                <td>{{resume.status}}</td>
+                <td>{{resume.uploadDate}}</td>
+                <th>
+                    <a class="btn btn-primary" [routerLink]="['/get-by-id', resume.id]">View</a>
+                </th>
             </tr>
         }
     </tbody>
 </table>
+</div>
 
-<button (click)="downloadResume()">Download Resume</button>

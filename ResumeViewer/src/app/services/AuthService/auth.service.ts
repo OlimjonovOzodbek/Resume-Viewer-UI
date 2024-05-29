@@ -23,7 +23,7 @@ export class AuthService {
       map((response)=>{
         if(response.isSuccess){
           localStorage.setItem(this.tokenKey, response.message)
-          // this.router.navigate(['/home'])
+          console.log("Succesfully logged in")
         }
         return response
       })
@@ -34,8 +34,8 @@ export class AuthService {
     return this.http.post<responseModel>(`${this.apiUrl}Auth/Register`, data).pipe(
       map((response)=>{
         if(response.isSuccess){
+          localStorage.setItem(this.tokenKey, response.message)
           console.log("Succesfully registered")
-          // this.router.navigate(['/home'])
         }
         return response
       })

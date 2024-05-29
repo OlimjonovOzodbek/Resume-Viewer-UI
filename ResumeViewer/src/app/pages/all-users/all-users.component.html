@@ -1,20 +1,25 @@
-<table style="border-collapse: collapse; width: 100%;">
-    <thead>
-        <tr>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Id</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Name</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Email</th>
-            <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Role</th>
+<div class="container mt-5">
+    <table class="table table-responsive table-bordered border-dark table-hover text-center text-capitalize">
+        <thead>
+            <tr class="table-dark table-active text-uupercase text-white">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th></th>
         </tr>
     </thead>
     <tbody>
         @for (user of users; track user.id) {
             <tr>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{user.id}}</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{user.name}}</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{user.email}}</td>
-                <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">{{user.role}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.role}}</td>
+                <th>
+                    <a class="btn btn-primary">Set status</a>
+                </th>
             </tr>
         }
     </tbody>
 </table>
+</div>
+

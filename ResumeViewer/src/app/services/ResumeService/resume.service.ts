@@ -93,4 +93,17 @@ export class ResumeService {
   //       })
   //     )
   // }
+
+  deleteResume(id: string, userId: string): Observable<responseModel> {
+    debugger;
+    const token = localStorage.getItem('token');
+    
+    const headers = new HttpHeaders(({
+      'Authorization': `Bearer ${token}`
+    }))
+
+    const options = { headers: headers };
+
+    return this.http.delete<responseModel>(`${this.apiUrl}Resume/Delete?userId=${userId}&resumeId=${id}&token=${token}`, options);
+  }
 }

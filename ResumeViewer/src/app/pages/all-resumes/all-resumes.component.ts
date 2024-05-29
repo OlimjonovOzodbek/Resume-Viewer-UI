@@ -27,23 +27,4 @@ export class AllResumesComponent implements OnInit{
       }
     })
   }
-
-  downloadResume(): void {
-    this.service.getById('0a6869fc-6788-4abe-892a-2373321e8453').subscribe({
-      next: (response) => {
-        const blob = new Blob([response], { type: 'application/pdf' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'resume.pdf';
-        document.body.appendChild(a);
-        a.click();
-        window.URL.revokeObjectURL(url);
-        a.remove();
-      },
-      error: (err) => {
-        console.error(err);
-      }
-    });
-  }
 }

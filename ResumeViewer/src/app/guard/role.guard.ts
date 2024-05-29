@@ -60,6 +60,7 @@ export const superAdminGuard: CanActivateFn = (route, state) => {
 
 export const multiRoleGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
+  debugger;
   if (localStorage.getItem(tokenKey)?.length! > 0) {
     const decodedToken: any = jwtDecode(localStorage.getItem(tokenKey)!);
     const role = decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
