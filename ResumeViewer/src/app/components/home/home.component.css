@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=REM:ital,wght@0,100..900;1,100..900&display=swap');
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.descriptions{
+    margin-top: 70px;
+    font-family: "REM", sans-serif;
+    font-size: 60px;
+}
+.descripts{
+    padding-top: 40px;
+}
+.descripts h1{
+    font-size: 20px;
+    font-family: "REM", sans-serif;
+}
+
+.Resume-Image img{
+    display: block;
+    height: 450px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+button{
+    color: white;
+    background-color: red;
+    height: 60px;
+    width: 290px;
+    border-radius: 30px;
+    border-color: red;
+    margin-top: 20px;
+    font-family: "REM", sans-serif;
+}
+@media (max-width: 700px) {
+    .container {
+        display: block;
+        text-align: center;
+    }
+    .container h1 {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .Resume-Image img{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}

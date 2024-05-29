@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.container button {
+    color:  blue;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+}
+.container button:hover {
+    color: #fff;
+    background-color: blue;
+}
+
+@media (max-width: 576px) {
+    .container {
+        display: block;
+        text-align: center;
+    }
+    .container button {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
