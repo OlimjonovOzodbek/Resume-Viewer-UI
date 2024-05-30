@@ -18,7 +18,7 @@
                 <td>{{resume.status}}</td>
                 <td>{{resume.uploadDate}}</td>
                 <th>
-                    <a class="btn btn-primary" [routerLink]="['/get-by-id', resume.id]">View</a>
+                    <a class="btn btn-primary" [routerLink]="['/get-by-id', resume.id]">View resume</a>
                 </th>
                 <th>
                     <button class="btn btn-danger" (click)="deleteResume(resume.id, resume.userId)">Delete</button>

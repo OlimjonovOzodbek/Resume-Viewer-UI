@@ -6,6 +6,7 @@
                 <th>Email</th>
                 <th>Role</th>
                 <th></th>
+                <th></th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +17,9 @@
                 <td>{{user.role}}</td>
                 <th>
                     <a class="btn btn-primary">Set status</a>
+                </th>
+                <th>
+                    <a class="btn btn-primary" [routerLink]="['/get-user', user.id]">View</a>
                 </th>
             </tr>
         }
