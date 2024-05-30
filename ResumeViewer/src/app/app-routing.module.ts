@@ -12,14 +12,14 @@ import { GetByIdComponent } from './pages/get-by-id/get-by-id.component';
 import { GetUserByIdComponent } from './pages/get-user-by-id/get-user-by-id.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent, canActivate: [guestGuard] },
-  { path: 'register', component: RegisterComponent, canActivate: [guestGuard] },
-  { path: 'all-users', component: AllUsersComponent, canActivate: [superAdminGuard] },
-  { path: 'all-resumes', component: AllResumesComponent, canActivate: [multiRoleGuard]},
-  { path: 'my-resumes', component: AllUserResumesComponent, canActivate: [userGuard] },
-  { path: 'upload-resume', component: UploadResumeComponent, canActivate: [userGuard] },
-  { path: 'get-by-id/:id', component: GetByIdComponent, canActivate: [multiRoleGuard] },
-  { path: 'get-user/:id', component: GetUserByIdComponent, canActivate: [superAdminGuard] },
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent},
+  { path: 'all-users', component: AllUsersComponent},
+  { path: 'all-resumes', component: AllResumesComponent},
+  { path: 'my-resumes', component: AllUserResumesComponent},
+  { path: 'upload-resume', component: UploadResumeComponent},
+  { path: 'get-by-id/:id', component: GetByIdComponent},
+  { path: 'get-user/:id', component: GetUserByIdComponent},
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: '**', component: HomeComponent }

@@ -2,6 +2,10 @@
     justify-content: center;
     margin-top: 20px;
 }
+.imgss{
+    margin-left: 190px;
+    margin-top: 80px;
+}
 .upload-file{
     margin: 0 auto;
     border: 2px solid purple;
@@ -9,9 +13,13 @@
     margin-top: 30px;
     height: 400px;
     width: 600px;
+   
 }
 .file-input{
-    background-color: black;
+    position: absolute;
+    height: 380px;
+    width: 580px;
+    opacity: 0;
 }
 .back{
     color:blue;
@@ -21,11 +29,39 @@
     border-radius: 10px;
     margin-top: 30px;
 }
+.upload-btn{
+    display: block;
+    margin-top: 30px;
+    margin-left: 500px;
+}
 button{
     display: block;
 }
 
 @media (max-width: 576px) {
+    .container {
+        display: block;
+        text-align: center;
+    }
+    .container .upload-file{
+        height: 250px;
+        width: 400px;
+    }
+    .container button {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .file-input{
+        opacity: 0;
+        height: 250px;
+        width: 380px;
+    }
+    .imgss{
+        margin-left: 5px;
+        margin-top: 15px;
+    }
+}
+@media (max-width: 1076px) {
     .container {
         display: block;
         text-align: center;
