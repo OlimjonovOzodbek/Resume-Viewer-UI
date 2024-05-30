@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { RouterLink } from '@angular/router';
 import { GetByIdComponent } from './pages/get-by-id/get-by-id.component';
+import { GetUserByIdComponent } from './pages/get-user-by-id/get-user-by-id.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { GetByIdComponent } from './pages/get-by-id/get-by-id.component';
     UploadResumeComponent,
     NavbarComponent,
     HomeComponent,
-    GetByIdComponent
+    GetByIdComponent,
+    GetUserByIdComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { UploadResumeComponent } from './pages/upload-resume/upload-resume.compo
 import { HomeComponent } from './components/home/home.component';
 import { adminGuard, guestGuard, multiRoleGuard, superAdminGuard, userGuard } from './guard/role.guard';
 import { GetByIdComponent } from './pages/get-by-id/get-by-id.component';
+import { GetUserByIdComponent } from './pages/get-user-by-id/get-user-by-id.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, canActivate: [guestGuard] },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'my-resumes', component: AllUserResumesComponent, canActivate: [userGuard] },
   { path: 'upload-resume', component: UploadResumeComponent, canActivate: [userGuard] },
   { path: 'get-by-id/:id', component: GetByIdComponent, canActivate: [multiRoleGuard] },
+  { path: 'get-user/:id', component: GetUserByIdComponent, canActivate: [superAdminGuard] },
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: '**', component: HomeComponent }

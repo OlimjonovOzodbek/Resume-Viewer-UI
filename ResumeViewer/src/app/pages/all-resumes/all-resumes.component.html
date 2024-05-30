@@ -13,7 +13,7 @@
         @for (resume of resumes; track resume.id) {
             <tr>
                 <th>
-                    <a class="btn btn-primary" [routerLink]="['/get-by-id', resume.id]">View</a>
+                    <a class="btn btn-primary" [routerLink]="['/get-user', resume.userId]">View</a>
                 </th>
                 <td>{{resume.name}}</td>
                 <td>{{resume.status}}</td>
