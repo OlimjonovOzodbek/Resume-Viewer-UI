@@ -18,6 +18,7 @@ export class UploadResumeComponent {
 
   onSubmit() {
     if (this.selectedFile) {
+      debugger;
       const formData = new FormData();
       formData.append('Document', this.selectedFile);
 

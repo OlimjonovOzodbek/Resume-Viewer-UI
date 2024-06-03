@@ -18,6 +18,14 @@
     color: #fff;
     background-color: blue;
 }
+a {
+    font-weight: bold;
+    color: black;
+}
+
+a:hover{
+    border-bottom: 1px solid black;
+}
 
 @media (max-width: 576px) {
     .container {

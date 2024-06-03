@@ -13,7 +13,12 @@ export const userGuard: CanActivateFn = (route, state) => {
   if (localStorage.getItem(tokenKey)?.length! > 0) {
     const decodedToken: any = jwtDecode(localStorage.getItem(tokenKey)!)
     const role = decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
-
+    const expirationTime = decodedToken.exp * 1000;
+    const currentTime = Date.now();
+    if (currentTime > expirationTime) {
+      router.navigate(['login']);
+      return false;
+    }
     if (role == 'User') {
       return true;
     }
@@ -31,7 +36,12 @@ export const adminGuard: CanActivateFn = (route, state) => {
   if (localStorage.getItem(tokenKey)?.length! > 0) {
     const decodedToken: any = jwtDecode(localStorage.getItem(tokenKey)!)
     const role = decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
-
+    const expirationTime = decodedToken.exp * 1000;
+    const currentTime = Date.now();
+    if (currentTime > expirationTime) {
+      router.navigate(['login']);
+      return false;
+    }
     if (role == 'Admin') {
       return true;
     }
@@ -47,6 +57,12 @@ export const superAdminGuard: CanActivateFn = (route, state) => {
   if (localStorage.getItem(tokenKey)?.length! > 0) {
     const decodedToken: any = jwtDecode(localStorage.getItem(tokenKey)!)
     const role = decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
+    const expirationTime = decodedToken.exp * 1000;
+    const currentTime = Date.now();
+    if (currentTime > expirationTime) {
+      router.navigate(['login']);
+      return false;
+    }
 
     if (role == 'SuperAdmin') {
       return true;
@@ -63,7 +79,12 @@ export const multiRoleGuard: CanActivateFn = (route, state) => {
   if (localStorage.getItem(tokenKey)?.length! > 0) {
     const decodedToken: any = jwtDecode(localStorage.getItem(tokenKey)!);
     const role = decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
-
+    const expirationTime = decodedToken.exp * 1000;
+    const currentTime = Date.now();
+    if (currentTime > expirationTime) {
+      router.navigate(['login']);
+      return false;
+    }
     if (role == 'SuperAdmin' || role == 'Admin') {
       return true;
     }
