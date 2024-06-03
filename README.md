@@ -61,10 +61,18 @@ For more details, check the server-side of [resume-viewer](https://github.com/us
 
 ![image](https://github.com/usman-hashimov/Resume-Viewer-UI/blob/main/.scrn/2.png)
 
-<h3>All-Resumes:</h3>
+<h3>Upload-Resume:</h3>
 
 ![image](https://github.com/usman-hashimov/Resume-Viewer-UI/blob/main/.scrn/3.png)
 
-<h3>All-Users:</h3>
+<h3>All-Resumes:</h3>
+
+![image](https://github.com/usman-hashimov/Resume-Viewer-UI/blob/main/.scrn/5.png)
+
+<h3>ALl-Users:</h3>
+
+![image](https://github.com/usman-hashimov/Resume-Viewer-UI/blob/main/.scrn/6.png)
+
+<h3>My-Resumes:</h3>
 
 ![image](https://github.com/usman-hashimov/Resume-Viewer-UI/blob/main/.scrn/5.png)
